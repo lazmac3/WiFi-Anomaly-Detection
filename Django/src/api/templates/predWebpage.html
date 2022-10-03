@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+   <head>
+      <link rel="stylesheet"
+         href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet"
+         href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstraptheme.min.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'prediction.css' %}">
+   </head>
+   <body>
+      <h1> Let's find suspicious packets </h1>
+      <p>
+      <div>
+         <h2>List of Registered Users</h2>
+         {% for u in users %}
+         <ul>
+            <li> {{u.username}} is user number {{u.id}}</li>
+         </ul>
+         {% endfor %}
+      </div>
+      <h2>Attack Packets in the database</h2>
+            {% for a in attack %}
+      <div>
+      <ul>
+      	 <li>Packet Logged at {{a.created_at}} </li>
+         <li>wlan_tag_length: {{a.wlan_tag_length}} </li>   
+         <li>wlan_country_info_fnm: {{a.wlan_country_info_fnm}} </li>
+         <li>wlan_sa: {{a.wlan_da}} </li>
+         <li>wlan_sa: {{a.wlan_sa}} </li>
+         <li>wlan_bssid: {{a.wlan_bssid}} </li>
+         <li>ip_src: {{a.ip_src}} </li>
+         <li>ip_dst: {{a.ip_dst}} </li>
+         <li>wlan_fixed_reason_code: {{a.wlan_fixed_reason_code}} </li>
+         <li>radiotap_channel_freq: {{a.radiotap_channel_freq}} </li>
+         <li>udp_length: {{a.udp_length}} </li>
+         </ul>
+         <ul>
+         prediction: {{a.prediction.predicted}}
+         </ul>
+         
+         <br>
+         {% endfor %}
+       </div>
+   </body>
+</html>
+
+

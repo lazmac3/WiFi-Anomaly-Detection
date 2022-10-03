@@ -1,0 +1,23 @@
+
+body {
+ padding-left: 80px; 
+ background-color: rgb(240, 193, 175);
+ padding-right: 1000px; 
+}
+h1{ 
+ color: black; 
+ padding-left: 15px; 
+ font-family: 'Arial';
+  
+} 
+h2 { 
+    padding-left: 15px; 
+    color: black; 
+    font-family: 'Arial';
+     
+   } 
+ul { 
+    color: #080808; 
+    font-family: 'Arial';
+     border: 2px solid black; 
+} 

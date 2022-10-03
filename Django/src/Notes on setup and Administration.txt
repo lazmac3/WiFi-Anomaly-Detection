@@ -1,0 +1,45 @@
+#This was made in a local enviroment, hwew are notes to make the enviroment and carry out Django tasks I tried to make a docker compose version but ran out of time. 
+
+Useful commands
+
+#make vm
+virtualenv myenv
+#navigate to directory
+cd myenv
+#start vm
+source bin/activate
+#deactivate vm
+deactivate
+#start project from ~/myenv$ 
+django-admin startproject myproject
+#rename root as src
+mv myproject src
+#run server - this runs at http://127.0.0.1:8000/ by default, I will stick to this as there is I will be running everything locally and submitting source code
+python3 manage.py runserver
+#stop server
+crtl+z
+#find pyton process running server
+ps aux|grep python
+#make app
+python3 manage.py startapp api
+#update database
+python3 manage.py migrate
+#create superuser - I used U:laurence P:Birkbeck - admin panel is http://127.0.0.1:8000/admin
+python3 manage.py createsuperuser
+#after updating models
+python3 manage.py makemigrations
+python3 manage.py migrate
+#TestingNotebook
+/home/laurence/WiFiProject/Notes/RESTapi.ipynb
+
+
+
+
+
+
+
+
+
+
+
+
